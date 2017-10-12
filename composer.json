@@ -12,6 +12,5 @@
         "monolog/monolog": "^1.17",
         "illuminate/database": "^5.3",
         "swiftmailer/swiftmailer": "^6.0"
-        "symfony/finder": "^3.3"
     }
 }
