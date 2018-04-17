@@ -17,9 +17,9 @@ return [
     'db' => [
         'driver'    => 'mysql',
         'host'      => 'localhost',
-        'database'  => 'db',
-        'username'  => 'user',
-        'password'  => 'pass',
+        'database'  => 'slim',
+        'username'  => 'slim',
+        'password'  => 'cmmYNfs_fFD3cYt5xGAE',
         'charset'   => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix'    => '',

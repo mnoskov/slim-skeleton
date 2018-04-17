@@ -1,0 +1,14 @@
+#!/opt/php71/bin/php 
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new Symfony\Component\Console\Application();
+
+$settings = require __DIR__ . '/app/settings.php';
+$container = new Slim\Container($settings);
+
+require __DIR__ . '/app/dependencies.php';
+
+$app->add(new App\Commands\CronCommand($container));
+$app->run();
