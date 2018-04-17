@@ -7,3 +7,9 @@ Phinx commands:
 ./cli phinx:migrate
 ...
 ```
+
+Users commands:
+```
+./cli users:create <login> <password>
+./cli users:delete <login>
+```
