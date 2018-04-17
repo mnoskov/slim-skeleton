@@ -17,9 +17,9 @@ return [
     'db' => [
         'driver'    => 'mysql',
         'host'      => 'localhost',
-        'database'  => 'ci43819_hse',
-        'username'  => 'ci43819_hse',
-        'password'  => 'mUP4NQiZ',
+        'database'  => 'db',
+        'username'  => 'user',
+        'password'  => 'pass',
         'charset'   => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix'    => '',

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Company extends \Illuminate\Database\Eloquent\Model {
+class Company extends \Illuminate\Database\Eloquent\Model
+{
 
 }
-

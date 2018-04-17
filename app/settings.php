@@ -6,7 +6,7 @@ return [
         ],
 
         'mailer' => [
-            'sender' => 'support@like-target.ru',
+            'sender' => 'mail@mnoskov.ru',
         ],
 
         // monolog settings

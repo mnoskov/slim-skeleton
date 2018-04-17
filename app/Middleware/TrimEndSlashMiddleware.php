@@ -5,9 +5,10 @@ namespace App\Middleware;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class TrimEndSlashMiddleware extends Middleware {
-
-    public function __invoke(Request $request, Response $response, callable $next) {
+class TrimEndSlashMiddleware extends Middleware
+{
+    public function __invoke(Request $request, Response $response, callable $next)
+    {
         $uri = $request->getUri();
         $path = $uri->getPath();
 
@@ -24,4 +25,3 @@ class TrimEndSlashMiddleware extends Middleware {
         return $next($request, $response);
     }
 }
-
