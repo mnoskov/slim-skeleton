@@ -12,4 +12,6 @@ require __DIR__ . '/app/dependencies.php';
 require __DIR__ . '/app/phinx.php';
 
 $app->add(new App\Commands\CronCommand($container));
+$app->add(new App\Commands\UserCreateCommand($container));
+$app->add(new App\Commands\UserDeleteCommand($container));
 $app->run();
