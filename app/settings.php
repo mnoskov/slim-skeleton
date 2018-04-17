@@ -9,6 +9,11 @@ return [
             'sender' => 'mail@mnoskov.ru',
         ],
 
+        'migrations' => [
+            'path'  => __DIR__ . '/../migrations',
+            'table' => 'migrations',
+        ],
+
         // monolog settings
         'logger' => [
             'name' => 'app',

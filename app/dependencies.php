@@ -22,6 +22,7 @@ $settings = $container->get('settings')['db'];
 $capsule = new Illuminate\Database\Capsule\Manager;
 $capsule->addConnection($settings);
 $capsule->bootEloquent();
+$capsule->setAsGlobal();
 
 $container['db'] = function($c) use ($capsule, $settings) {
     $db = $capsule->getConnection();
