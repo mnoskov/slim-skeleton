@@ -9,14 +9,23 @@ class $className extends $baseClassName
     {
         /**
          * https://laravel.com/docs/5.5/migrations#creating-tables
-         * use $this->schema instead of \Schema
          */
+
+        /**
+        $this->schema->create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('login', 32);
+            $table->string('password');
+            $table->timestamps();
+            $table->index('login');
+        });
+        */
     }
 
     public function down()
     {
         /**
-         * use $this->schema instead of \Schema
-         */
+        $this->schema->drop('users');
+        */
     }
 }
