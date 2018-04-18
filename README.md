@@ -3,8 +3,9 @@ Includes Twig, Eloquent, SwiftMailer and Console. Database migrations by Phinx.
 
 Phinx commands:
 ```
-./cli phinx:create
+./cli phinx:create <CamelCaseMigrationName>
 ./cli phinx:migrate
+./cli phinx:rollback
 ...
 ```
 
