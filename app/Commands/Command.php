@@ -10,7 +10,8 @@ class Command extends SymphonyCommand
         __construct as containerConstruct;
     }
 
-    public function __construct(\Slim\Container $container, $name = null) {
+    public function __construct(\Slim\Container $container, $name = null)
+    {
         $this->containerConstruct($container);
         parent::__construct($name);
     }

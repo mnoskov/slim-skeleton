@@ -9,7 +9,8 @@ use App\Models\User;
 
 class UserCreateCommand extends Command
 {
-    protected function configure() {
+    protected function configure()
+    {
         $this
         ->setName('users:create')
         ->setDescription('creates new user')
@@ -17,7 +18,8 @@ class UserCreateCommand extends Command
         ->addArgument('password', InputArgument::REQUIRED, 'Password');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
         $login    = $input->getArgument('login');
         $password = $input->getArgument('password');
 

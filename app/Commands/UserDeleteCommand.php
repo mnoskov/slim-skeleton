@@ -9,14 +9,16 @@ use App\Models\User;
 
 class UserDeleteCommand extends Command
 {
-    protected function configure() {
+    protected function configure()
+    {
         $this
         ->setName('users:delete')
         ->setDescription('deletes new user')
         ->addArgument('login', InputArgument::REQUIRED, 'Login');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
         $login = $input->getArgument('login');
 
         $user = User::where('login', $login)->first();
