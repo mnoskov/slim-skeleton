@@ -12,7 +12,8 @@ class $className extends $baseClassName
          */
 
         /**
-        $this->schema->create('users', function (Blueprint $table) {
+        $this->schema->create('users', function(Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('login', 32);
             $table->string('password');

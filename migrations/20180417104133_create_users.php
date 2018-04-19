@@ -8,6 +8,7 @@ class CreateUsers extends Migration
     public function up()
     {
         $this->schema->create('users', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('login', 32);
             $table->string('password');
