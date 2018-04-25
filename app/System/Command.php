@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Commands;
+namespace App\System;
 
 use Symfony\Component\Console\Command\Command as SymphonyCommand;
 
 class Command extends SymphonyCommand
 {
-    use \App\System\ContainerTrait {
+    use ContainerTrait {
         __construct as containerConstruct;
     }
 

@@ -6,7 +6,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class CronCommand extends Command
+class CronCommand extends \App\System\Command
 {
     protected function configure()
     {

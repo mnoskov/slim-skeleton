@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Output\OutputInterface;
 use App\Models\User;
 
-class UserDeleteCommand extends Command
+class UserDeleteCommand extends \App\System\Command
 {
     protected function configure()
     {
