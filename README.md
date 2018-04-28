@@ -6,6 +6,8 @@ Phinx commands:
 ./cli phinx:create <CamelCaseMigrationName>
 ./cli phinx:migrate
 ./cli phinx:rollback
+./cli phinx:seed_create <CamelCaseSeedName>
+./cli phinx:seed_run [-s <CamelCaseSeedName>]
 ...
 ```
 
