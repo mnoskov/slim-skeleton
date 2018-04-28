@@ -10,7 +10,8 @@ return [
         ],
 
         'migrations' => [
-            'path'  => __DIR__ . '/../migrations',
+            'path'  => __DIR__ . '/../storage/migrations',
+            'seeds' => __DIR__ . '/../storage/seeds',
             'table' => 'migrations',
         ],
 
