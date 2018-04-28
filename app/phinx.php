@@ -18,6 +18,7 @@ $dispatcher->addListener(ConsoleEvents::COMMAND, function (ConsoleCommandEvent $
         $config = new Config([
             'paths' => [
                 'migrations' => $c['migrations']['path'],
+                'seeds'      => $c['migrations']['seeds'],
             ],
             'templates' => [
                 'file' => $c['view']['template_path'] . '/migration.php.tpl',
@@ -27,11 +28,13 @@ $dispatcher->addListener(ConsoleEvents::COMMAND, function (ConsoleCommandEvent $
                 'default_migration_table' => $c['migrations']['table'],
                 'default_database' => 'db',
                 'db' => [
-                    'adapter' => $c['db']['driver'],
-                    'host'    => $c['db']['host'],
-                    'name'    => $c['db']['database'],
-                    'user'    => $c['db']['username'],
-                    'pass'    => $c['db']['password'],
+                    'adapter'   => $c['db']['driver'],
+                    'host'      => $c['db']['host'],
+                    'name'      => $c['db']['database'],
+                    'user'      => $c['db']['username'],
+                    'pass'      => $c['db']['password'],
+                    'charset'   => 'utf8',
+                    'collation' => 'utf8_unicode_ci',
                 ]
             ]
         ]);
