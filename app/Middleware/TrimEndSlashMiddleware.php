@@ -5,7 +5,7 @@ namespace App\Middleware;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-class TrimEndSlashMiddleware extends Middleware
+class TrimEndSlashMiddleware extends \App\System\Middleware
 {
     public function __invoke(Request $request, Response $response, callable $next)
     {

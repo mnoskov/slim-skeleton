@@ -6,7 +6,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 use App\Models\User;
 
-class AuthMiddleware extends Middleware
+class AuthMiddleware extends \App\System\Middleware
 {
     public function __invoke(Request $request, Response $response, callable $next)
     {

@@ -1,4 +1,5 @@
 <?php
+
 return [
     'settings' => array_merge([
         'app' => [
