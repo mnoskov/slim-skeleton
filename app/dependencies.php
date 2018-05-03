@@ -11,10 +11,10 @@ $container['view'] = function($c) {
 };
 
 $container['logger'] = function ($c) {
-    $settings = $c->get('settings');
-    $logger = new \Monolog\Logger($settings['logger']['name']);
+    $settings = $c->get('settings')['logger'];
+    $logger = new \Monolog\Logger($settings['name']);
     $logger->pushProcessor(new \Monolog\Processor\UidProcessor());
-    $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['logger']['path'], \Monolog\Logger::DEBUG));
+    $logger->pushHandler(new \Monolog\Handler\StreamHandler($settings['path'] . '/' . $settings['name'] . '.log', \Monolog\Logger::DEBUG));
     return $logger;
 };
 

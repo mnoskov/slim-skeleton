@@ -1,5 +1,7 @@
 <?php
 
+$storage = __DIR__ . '/../storage';
+
 return [
     'settings' => array_merge([
         'app' => [
@@ -11,19 +13,15 @@ return [
         ],
 
         'migrations' => [
-            'path'  => __DIR__ . '/../storage/migrations',
-            'seeds' => __DIR__ . '/../storage/seeds',
+            'path'  => $storage . '/migrations',
+            'seeds' => $storage . '/seeds',
             'table' => 'migrations',
         ],
 
         // monolog settings
         'logger' => [
             'name' => 'app',
-            'path' => __DIR__ . '/storage/app.log',
-        ],
-
-        'cache' => [
-            'directory' => __DIR__ . '/storage/cache',
+            'path' => $storage . '/logs',
         ],
     ], include __DIR__ . '/environment.php')
 ];
