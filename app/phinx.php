@@ -33,8 +33,8 @@ $dispatcher->addListener(ConsoleEvents::COMMAND, function (ConsoleCommandEvent $
                     'name'      => $c['db']['database'],
                     'user'      => $c['db']['username'],
                     'pass'      => $c['db']['password'],
-                    'charset'   => 'utf8',
-                    'collation' => 'utf8_unicode_ci',
+                    'charset'   => $c['db']['charset'],
+                    'collation' => $c['db']['collation'],
                 ]
             ]
         ]);
