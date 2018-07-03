@@ -13,7 +13,7 @@ require __DIR__ . '/app/phinx.php';
 
 foreach (glob(__DIR__ . '/app/Commands/*Command.php') as $cmd) {
     $class = 'App\\Commands\\' . pathinfo($cmd, PATHINFO_FILENAME);
-    $app->add(new $class($ci));
+    $app->add(new $class($container));
 }
 
 $app->run();
