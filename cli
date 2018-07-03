@@ -11,7 +11,9 @@ $container = new Slim\Container($settings);
 require __DIR__ . '/app/dependencies.php';
 require __DIR__ . '/app/phinx.php';
 
-$app->add(new App\Commands\CronCommand($container));
-$app->add(new App\Commands\UserCreateCommand($container));
-$app->add(new App\Commands\UserDeleteCommand($container));
+foreach (glob(__DIR__ . '/app/Commands/*Command.php') as $cmd) {
+    $class = 'App\\Commands\\' . pathinfo($cmd, PATHINFO_FILENAME);
+    $app->add(new $class($ci));
+}
+
 $app->run();
