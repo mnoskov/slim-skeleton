@@ -69,9 +69,11 @@ $container['validator'] = function($c)
         throw new Exception('Validation class not found! Run "composer require illuminate/validation" in console.');
     }
 
+    $settings = $c->settings['languages'];
+
     $filesystem = new Illuminate\Filesystem\Filesystem();
-    $fileLoader = new Illuminate\Translation\FileLoader($filesystem, '');
-    $translator = new Illuminate\Translation\Translator($fileLoader, 'en_US');
+    $fileLoader = new Illuminate\Translation\FileLoader($filesystem, $settings['path']);
+    $translator = new Illuminate\Translation\Translator($fileLoader, $settings['default']);
     $validator  = new Illuminate\Validation\Factory($translator);
 
     return $validator;

@@ -18,6 +18,11 @@ return [
             'table' => 'migrations',
         ],
 
+        'languages' => [
+            'path'    => __DIR__ . '/../languages',
+            'default' => 'en',
+        ],
+
         // monolog settings
         'logger' => [
             'name' => 'app',
