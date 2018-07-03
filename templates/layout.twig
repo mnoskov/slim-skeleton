@@ -8,8 +8,25 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css?v{{ app.version }}">
     </head>
+
     <body>
         <div class="container">
+            {% if flash.errors %}
+                <div class="global-error alert alert-danger">
+                    {% for msg in flash.errors %}
+                        {{ msg }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if flash.success %}
+                <div class="global-success alert alert-success">
+                    {% for msg in flash.success %}
+                        {{ msg }}<br>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
             {% block body %}{% endblock %}
         </div>
 
