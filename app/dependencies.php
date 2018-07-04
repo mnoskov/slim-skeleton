@@ -21,6 +21,10 @@ $container['view'] = function($c)
         return $value === null ? $default : $value;
     }));
 
+    $env->addFilter(new Twig_Filter('decline', function($string, $words) {
+        return \decline($string, $words);
+    }));
+
     return $view;
 };
 
