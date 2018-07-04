@@ -8,8 +8,22 @@ if (!function_exists('ci')) {
 }
 
 if (!function_exists('decline')) {
-    function decline(string $str, array $words = [])
+    function decline(string $number, array $words = [])
     {
-        return $str;
+        $number = intval($number) % 100;
+
+        if ($number >= 5 && $number <= 20) {
+            return $words[2];
+        }
+
+        $number %= 10;
+        
+        if ($number == 1) {
+            return $words[0];
+        } elseif ($number >= 2 && $number <= 4) {
+            return $words[1];
+        }
+
+        return $words[2];
     }
 }
