@@ -14,5 +14,6 @@ App\System\ContainerSingleton::run($container);
 
 require __DIR__ . '/../app/dependencies.php';
 require __DIR__ . '/../app/routes.php';
+require __DIR__ . '/../app/helpers.php';
 
 $app->run();
