@@ -10,6 +10,8 @@ $settings['settings']['public_path'] = __DIR__;
 $app = new \Slim\App($settings);
 $container = $app->getContainer();
 
+App\System\ContainerSingleton::run($container);
+
 require __DIR__ . '/../app/dependencies.php';
 require __DIR__ . '/../app/routes.php';
 
