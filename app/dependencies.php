@@ -11,10 +11,13 @@ $container['view'] = function($c)
     $env = $view->getEnvironment();
 
     $env->addGlobal('app', $settings['app']);
-    $env->addGlobal('flash', $c->flash->getMessages());
 
-    if ($c->flash->hasMessage('old')) {
-        $env->addGlobal('old', $c->flash->getFirstMessage('old'));
+    if (isset($_SESSION)) {
+        $env->addGlobal('flash', $c->flash->getMessages());
+
+        if ($c->flash->hasMessage('old')) {
+            $env->addGlobal('old', $c->flash->getFirstMessage('old'));
+        }
     }
 
     $env->addFilter(new Twig_Filter('if_undefined', function($value, $default) {
